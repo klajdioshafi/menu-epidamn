@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epidamn Menu</title>
+    <link rel="icon" type="image/x-icon" href="./templates/epidamn-logo.png">
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            background: #333;
+        }
+
+        .images {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 0;
+            padding-block: 3rem;
+            opacity: 0;
+            animation: epidamn-menu-display 0.8s 3s ease-in-out;
+            animation-fill-mode: forwards;
+            z-index: 1;
+        }
+
+        .images>img {
+            max-width: 80%;
+            height: fit-content;
+            box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .images>span {
+            width: 80%;
+            height: 3rem;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: visible;
+            animation: epidamn-logo-display 1.5s 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .logo>img {
+            max-width: 40%;
+            animation: epidamn-logo-margin 1.5s ease-in-out;
+            z-index: 2;
+        }
+
+        @keyframes epidamn-logo-margin {
+            0% {
+                margin-bottom: -1400px;
+            }
+
+            100% {
+                margin-bottom: 0;
+            }
+        }
+
+        @keyframes epidamn-logo-display {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+        @keyframes epidamn-menu-display {
+            0% {
+                opacity: 0;
+                height: 0;
+            }
+
+            100% {
+                opacity: 1;
+                height: 100%;
+            }
+        }
+
+        @media(max-width: 344px) {
+            .images {
+                padding-block: .6rem;
+            }
+
+            .images>img {
+                max-width: 98%;
+                box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.2);
+            }
+
+            .images>span {
+                width: 98%;
+                height: .6rem;
+            }
+
+            .logo>img {
+                max-width: 70%;
+            }
+        }
+        @media(max-width: 640px) {
+            .images {
+                padding-block: 1.5rem;
+            }
+
+            .images>img {
+                max-width: 96%;
+                box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+            }
+
+            .images>span {
+                width: 96%;
+                height: 1.5rem;
+            }
+
+            .logo>img {
+                max-width: 70%;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .images {
+                padding-block: 2rem;
+            }
+
+            .images>img {
+                max-width: 85%;
+            }
+
+            .images>span {
+                width: 85%;
+                height: 2rem;
+            }
+
+            .logo>img {
+                max-width: 65%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./templates/logo png-01.png" alt="">
+        </div>
+        <div class="images">
+            <img src="./templates/menu epidamn en 2024_pages-to-jpg-0001.jpg" alt="">
+            <span></span>
+            <img src="./templates/menu epidamn en 2024_pages-to-jpg-0002.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
